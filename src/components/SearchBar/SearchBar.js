@@ -50,19 +50,33 @@ handleSearch(event) {
 //Given from the instructions
   event.preventDefault()
 }
-
+//My code
   renderSortByOptions() {
 //changed Object.keys(sortByOptions) to Object.keys(this.sortByOptions) per slack discussion
     return Object.keys(this.sortByOptions).map(sortByOption => {
       let sortByOptionValue = this.sortByOptions[sortByOption];
-      return (<li className={this.getSortByClass(sortByOptionValue)}
+      return <li className={this.getSortByClass(sortByOptionValue)}
       key={sortByOptionValue}
       //Not sure if I did step 9 correct
       onClick={this.handleSortByChange.bind(this, sortByOptionValue)}>
       {sortByOption}
     </li>
-    });
+    })
   }
+//End of my code
+
+//Ana code
+/*
+renderSortByOptions(){
+   return Object.keys(this.sortByOptions).map(sortByOption => {
+     let sortByOptionValue = this.sortByOptions[sortByOption];
+     return <li className={this.getSortByClass(sortByOptionValue)}
+     key={sortByOptionValue}
+     onClick={this.handleSortByChange.bind(this,sortByOptionValue)}>{sortByOption}</li>
+   })
+ }
+ */
+ //End of Ana code
 
   render() {
     return (
