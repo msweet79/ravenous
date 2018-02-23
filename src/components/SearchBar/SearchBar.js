@@ -58,9 +58,9 @@ handleSearch(event) {
       return (<li className={this.getSortByClass(sortByOptionValue)}
       key={sortByOptionValue}
       //Not sure if I did step 9 correct
-      onClick={this.handleSortByChange.bind(this, sortByOptionValue)>
+      onClick={this.handleSortByChange.bind(this, sortByOptionValue)}>
       {sortByOption}
-    </li>;
+    </li>
     });
   }
 
